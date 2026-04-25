@@ -1,0 +1,115 @@
+/* -----------VARIABLES & SETUP----------- */
+:root {
+  /* -----COLORS----- */
+  --green-500: #3c8067;
+  --green-700: #1b4133;
+  --black: #1c232b;
+  --grey: #6c7289;
+  --cream: #f2ebe3;
+  --white: #ffffff;
+
+  /* -----FONT SIZES----- */
+  --fluid-font-0: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+  --fluid-font-1: clamp(0.9844rem, 0.9844rem + 0vw, 0.9844rem);
+  --fluid-font-2: clamp(1.9688rem, 1.9688rem + 0vw, 1.9688rem);
+}
+
+/* -----------BASE & RESET----------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--fluid-font-0);
+  background-color: var(--cream);
+  color: var(--grey);
+  padding: 2rem;
+  /* margin: 2rem;  search how is using margin on body is different from using padding on it.    */
+  display: grid;
+  place-items: center;
+}
+
+/* -----------TYPOGRAPHY----------- */
+
+.product-type {
+  font-size: var(--fluid-font-1);
+  line-height: 1.6;
+  letter-spacing: 5px;
+}
+
+.product-name {
+  font-family: "Fraunces", serif;
+  font-size: var(--fluid-font-2);
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.product-description {
+  line-height: 1.6;
+}
+
+.current-price {
+  font-family: "Fraunces", serif;
+  font-size: var(--fluid-font-2);
+  font-weight: 700;
+  color: var(--green-500);
+}
+
+/* -----------COMPONENTS----------- */
+
+.container {
+  max-width: 900px;
+  background-color: var(--white);
+  display: grid;
+  gap: 1.5rem;
+  border-radius: 8px;
+}
+
+.image img {
+  display: block;
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0 2rem 2rem;
+}
+
+.price {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--green-500);
+  color: var(--white);
+  border: none;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* -----------UI ELEMENTS----------- */
+
+.btn:hover {
+  background-color: var(--green-700);
+}
