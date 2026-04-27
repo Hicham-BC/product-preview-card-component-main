@@ -27,8 +27,7 @@ body {
   font-size: var(--fluid-font-0);
   background-color: var(--cream);
   color: var(--grey);
-  padding: 2rem;
-  /* margin: 2rem;  search how is using margin on body is different from using padding on it.    */
+  padding: 6rem 1rem;
   display: grid;
   place-items: center;
 }
@@ -46,7 +45,7 @@ body {
   font-size: var(--fluid-font-2);
   font-weight: 700;
   color: var(--black);
-  line-height: 1.2;
+  line-height: 1;
   letter-spacing: -1px;
 }
 
@@ -64,11 +63,15 @@ body {
 /* -----------COMPONENTS----------- */
 
 .container {
-  max-width: 900px;
+  max-width: 600px;
+  width: 100%;
   background-color: var(--white);
   display: grid;
-  gap: 1.5rem;
   border-radius: 8px;
+}
+
+.image {
+  display: block;
 }
 
 .image img {
@@ -83,18 +86,20 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
-  padding: 0 2rem 2rem;
+  padding: 2rem;
 }
 
 .price {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   gap: 1rem;
 }
 
 .btn {
   width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,8 +113,31 @@ body {
   transition: background-color 0.3s;
 }
 
+.btn span {
+  letter-spacing: 1px;
+}
 /* -----------UI ELEMENTS----------- */
 
 .btn:hover {
   background-color: var(--green-700);
+}
+
+/* -----------MEDIA QUERRIES----------- */
+
+@media (min-width: 37rem) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 8px;
+  }
+
+  .content {
+    justify-content: center;
+  }
 }
