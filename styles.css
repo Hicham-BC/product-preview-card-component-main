@@ -1,5 +1,9 @@
 /* -----------VARIABLES & SETUP----------- */
 :root {
+
+  --main-raduis: 8px;
+  --main-padding: 2rem;
+
   /* -----COLORS----- */
   --green-500: #3c8067;
   --green-700: #1b4133;
@@ -67,7 +71,7 @@ body {
   width: 100%;
   background-color: var(--white);
   display: grid;
-  border-radius: 8px;
+  border-radius: var(--main-raduis);
 }
 
 .image {
@@ -77,8 +81,8 @@ body {
 .image img {
   display: block;
   width: 100%;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: var(--main-raduis);
+  border-top-right-radius: var(--main-raduis);
 }
 
 .content {
@@ -86,7 +90,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
-  padding: 2rem;
+  padding: var(--main-padding);
 }
 
 .price {
@@ -106,9 +110,10 @@ body {
   background-color: var(--green-500);
   color: var(--white);
   border: none;
+  outline: none;
   gap: 0.5rem;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: var(--main-raduis);
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -118,7 +123,7 @@ body {
 }
 /* -----------UI ELEMENTS----------- */
 
-.btn:hover {
+.btn:hover, .btn:focus {
   background-color: var(--green-700);
 }
 
@@ -134,7 +139,7 @@ body {
     height: 100%;
     object-fit: cover;
     border-top-right-radius: 0;
-    border-bottom-left-radius: 8px;
+    border-bottom-left-radius: var(--main-raduis);
   }
 
   .content {
